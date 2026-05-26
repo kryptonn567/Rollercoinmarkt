@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://rollercoinmarkt.onrender.com',
+        target: 'https://rollercoinmarkt-backe.onrender.com',
         changeOrigin: true,
       }
     }
