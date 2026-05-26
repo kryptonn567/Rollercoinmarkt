@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@400;700&display=swap');
+
+:root {
+  --bg-color: #000000;
+  --panel-bg: rgba(10, 10, 10, 0.85);
+  --accent: #ffffff;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --lvl-0: #808080;
+  --lvl-1: #39ff14;
+  --lvl-2: #00e5ff;
+  --lvl-3: #bd00ff;
+  --lvl-4: #fff000;
+  --lvl-5: #ff003c;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #1a1a1a 0%, #000000 100%) fixed;
+  color: var(--text-secondary);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #000000;
+  color: #ffffff;
+}
+
+/* Custom glow animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+.glow-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
