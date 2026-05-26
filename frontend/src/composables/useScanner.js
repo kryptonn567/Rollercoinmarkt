@@ -11,7 +11,7 @@ export function useScanner() {
   const dragIndex = ref(null)
   const isDragging = ref(false)
   
-  const API_BASE = ''
+  const API_BASE = import.meta.env.VITE_API_URL || ''
 
   const searchUser = async () => {
     if (!searchUsername.value) return

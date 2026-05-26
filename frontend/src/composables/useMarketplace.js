@@ -16,7 +16,7 @@ export function useMarketplace() {
   const selectedRarities = ref([0, 1, 2, 3, 4, 5])
 
   const itemsPerPage = 18
-  const API_BASE = ''
+  const API_BASE = import.meta.env.VITE_API_URL || ''
 
   const rarityMap = [
     { id: 0, name: 'Common' },
