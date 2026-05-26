@@ -34,8 +34,20 @@ Rollercoinmarkt/
 │   ├── package.json          # Dependencies & scripts for maintenance
 │   └── vite.config.js        # Vite configuration for maintenance
 ├── start.bat                 # Windows controller/startup batch file
+├── render.yaml               # Render Blueprint configuration for deployment
 └── .gitignore                # Root-level Git ignores
 ```
+
+---
+
+## ☁️ Deployment (Render Blueprint)
+
+This project contains a `render.yaml` blueprint. To deploy the backend to **Render** automatically:
+1. Push this project to GitHub.
+2. Go to the [Render Dashboard](https://dashboard.render.com/) and click **New > Blueprint**.
+3. Connect your GitHub repository.
+4. Render will automatically detect `render.yaml` and configure the Python FastAPI service with the correct build and start commands.
+5. In the dashboard, enter your `BEARER_TOKEN` when prompted.
 
 ---
 
